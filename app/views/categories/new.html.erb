@@ -1,5 +1,7 @@
+<%= stylesheet_link_tag "categories" %>
+
 <%= render "shared/navbar", category: nil %>
 
-<section>
+<section class="new-category-section">
   <%= render "form", category: @category %>
 </section>

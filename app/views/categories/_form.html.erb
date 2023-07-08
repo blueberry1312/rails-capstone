@@ -1,6 +1,10 @@
-<%= form_with(model: category, class: "form") do |form| %>
+
+
+
+
+  <%= form_with(model: category, class: "form") do |form| %>
     <% if category.errors.any? %>
-      <div>
+      <div style="color: red">
         <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
   
         <ul>
@@ -11,13 +15,13 @@
       </div>
     <% end %>
   
-    <div>
-      <%= form.label :name %>
-      <%= form.text_field :name %>
+    <div class="form-group">
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class: "text-input"%>
     </div>
   
-    <div">
-      <%= form.label "Select icon:"  %>
+    <div class="form-group ">
+      <%= form.label "Select icon:", style: "display: block" %>
       <div class="icons-group">
         <%= form.collection_radio_buttons :icon, [["Health", "health_icon.webp"], ["Education", "education_icon.webp"], ["Food", "food_icon.webp"], ["Clothing", "clothing_icon.webp"], ["Entertainment", "entertainment_icon.webp"], ["Other", "other_icon.webp"]], :second, :first do |b| %>
           <%= b.label do %>
@@ -28,7 +32,7 @@
       </div>
     </div>
   
-    <div>
+    <div class="submit-container">
       <%= form.submit "Save" %>
     </div>
   <% end %>
