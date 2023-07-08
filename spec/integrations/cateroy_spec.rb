@@ -88,7 +88,6 @@ RSpec.describe 'Category integration tests', type: :feature do
     it 'should display the img of the 6 icons' do
       expect(page).to have_selector('img', count: 6)
     end
-
   end
 
   describe 'edit page' do
@@ -114,6 +113,5 @@ RSpec.describe 'Category integration tests', type: :feature do
     it 'should display the img of the 9 icons' do
       expect(page).to have_selector('img', count: 6)
     end
-
   end
 end
