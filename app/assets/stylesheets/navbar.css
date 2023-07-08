@@ -1,0 +1,27 @@
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.header .navbar .back-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.header .navbar .logout {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.header .navbar .logout:hover {
+  color: #5fb523;
+}

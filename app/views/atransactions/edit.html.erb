@@ -1,0 +1,10 @@
+<h1>Editing expense</h1>
+
+<%= render "form", atransaction: @atransaction %>
+
+<br>
+
+<div>
+  <%= link_to "Show this transaction", category_atransaction_path %> |
+  <%= link_to "Back to transactions", request.referer %>
+</div>

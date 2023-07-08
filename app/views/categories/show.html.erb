@@ -1,0 +1,24 @@
+<%= render 'shared/navbar', category: @category %>
+
+<section>
+  <%= render @category %>
+
+  <div>
+    <%= link_to "Edit category", edit_category_path(@category) %>
+    <p>Total spent: $<%= @category.atransactions.sum(:amount) %></p>
+    <%= button_to "Delete category", @category, method: :delete %>
+  </div>
+
+  <hr>
+
+  <h2>Transactions</h2>
+
+  <div id="transactions">
+    <% @atransactions.each do |atransaction| %>
+      <%= render atransaction %>
+      <%#<%= link_to "Show this transaction", category_atransaction_path(@category, atransaction) %>  
+    <% end %>
+  </div>   
+  <%= link_to "Add a new transaction", new_category_atransaction_path(@category.id) %>
+
+</section>

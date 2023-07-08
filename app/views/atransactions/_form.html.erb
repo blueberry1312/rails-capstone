@@ -1,0 +1,27 @@
+<%= form_with(url: category_atransactions_path, model: atransaction, class: "form") do |form| %>
+    <% if atransaction.errors.any? %>
+      <div>
+        <h2><%= pluralize(atransaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+  
+        <ul>
+          <% atransaction.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div>
+      <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+  
+      <div>
+        <%= form.label :amount %>
+        <%= form.text_field :amount %>
+      </div>
+    </div>
+  
+    <%= form.submit "Save" %>
+  <% end %>

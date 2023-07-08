@@ -10,7 +10,8 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @expenses = ExpenseCategory.where(category_id: params[:id]).map(&:expense).sort_by(&:created_at).reverse
+    @atransactions = AtransactionCategory.includes(:atransaction).where(category_id: params[:id]).map(&:atransaction)
+      .sort_by(&:created_at).reverse
     @title = "#{@category.name} category"
   end
 
@@ -28,7 +29,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }
