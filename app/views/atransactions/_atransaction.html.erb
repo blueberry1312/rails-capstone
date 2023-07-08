@@ -1,0 +1,10 @@
+<div id="<%= dom_id atransaction %>">
+
+  <div>
+    <p><%= atransaction.name %></p>
+
+    <p><%= atransaction.created_at.strftime("%d %B %Y") %></p>
+  </div>
+
+  <p>Spent: $<%= atransaction.amount %></p>
+</div>

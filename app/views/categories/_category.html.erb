@@ -1,0 +1,12 @@
+<div id="<%= dom_id category %>">
+  <div>
+    <img src="<%= asset_path(category.icon) %>" alt="Category Icon">
+    <div>
+      <p><%= category.name %></p>
+
+      <p><%= category.created_at.strftime("%d %B %Y") %></p>
+    </div>
+  </div>
+
+  <p>$<%= category.atransactions.sum(:amount) %></p>
+</div>

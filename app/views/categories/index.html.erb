@@ -1,0 +1,15 @@
+<%= render 'shared/navbar', category: nil %>
+
+<section>
+  <div>
+    <% @categories.each do |category| %>
+      <%= link_to category do %>
+        <%= render category %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= link_to "Add a new category", new_category_path %>
+  </div>
+</section>

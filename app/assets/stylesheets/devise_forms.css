@@ -1,0 +1,75 @@
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #3778c2;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.form-header .back-btn {
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.form-header .login-btn {
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-header h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.form-header input[type="submit"] {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field input {
+  margin-top: -1px;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.form-footer a {
+  color: #808080;
+  text-decoration: none;
+  text-align: center;
+}
+
+.alert,
+.notice {
+  color: #434b54;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}

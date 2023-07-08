@@ -1,0 +1,10 @@
+<p><%= notice %></p>
+
+<%= render @atransaction %>
+
+<div>
+  <%= link_to "Edit this transaction", edit_category_atransaction_path %> |
+  <%= link_to "Back", category_atransactions_path %>
+
+  <%= button_to "Remove this transaction", category_atransaction_path(@atransaction), method: :delete %>
+</div>
