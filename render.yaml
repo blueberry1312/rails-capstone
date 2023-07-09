@@ -12,7 +12,6 @@ services:
     startCommand: "bundle exec rails s"
     envVars:
       - key: DATABASE_URL
-        value: "postgres://pgsv_user:pgsv_pw@localhost:5432/rails_capstone_production"
       - key: RAILS_MASTER_KEY
         sync: false
 
