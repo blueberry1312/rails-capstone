@@ -21,6 +21,8 @@
       <%#<%= link_to "Show this transaction", category_atransaction_path(@category, atransaction) %>  
     <% end %>
   </div>   
-  <%= link_to "Add a new transaction", new_category_atransaction_path(@category.id) %>
+  <div class="btn-container">
+  <%= link_to "Add a new transaction", new_category_atransaction_path(@category.id), class: "btn" %>
+  </div>
 
 </section>

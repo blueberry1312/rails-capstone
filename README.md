@@ -116,7 +116,7 @@ To run tests, run the following command:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](notyet.com)
+[Live Demo](https://rails-capstone-6i0x.onrender.com)
 
 ## 👥 Authors <a name="authors"></a>
 
