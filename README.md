@@ -117,6 +117,7 @@ To run tests, run the following command:
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 [Live Demo](https://rails-capstone-6i0x.onrender.com)
+[Video Walkthrought](https://www.loom.com/share/c2f7b8441d9b43df975ace9f990a81f2?sid=7149ec10-ac96-4fc7-82b3-c23fd26b4a69)
 
 ## 👥 Authors <a name="authors"></a>
 
