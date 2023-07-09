@@ -1,23 +1,20 @@
 databases:
   - name: postgres
     ipAllowList: []
+    databaseName: rails_capstone_production
+    user: rails_capstone
 
 services:
   - type: web
-    name: rails
+    name: rails_capstone
     env: ruby
-    buildCommand: "./bin/render-build.sh"
-    startCommand: bundle exec rails s
+    buildCommand: "./render-build.sh"
+    startCommand: "bundle exec rails s"
     envVars:
-      - key: RAILS_MASTER_KEY
-        sync: false
       - key: DATABASE_URL
         fromDatabase:
           name: postgres
           property: connectionString
-  - type: redis
-    name: redis
-    ipAllowList: []
-    plan: free
-    maxmemoryPolicy: noeviction
+      - key: RAILS_MASTER_KEY
+        sync: false
     
