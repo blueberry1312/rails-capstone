@@ -17,6 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -24,12 +25,14 @@ default: &default
 development:
   <<: *default
   database: rails_capstone_development
+  user: pgsv_user
+  password: pgsv_pw
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: BudgetApp
+  #username: rails_capstone
 
   # The password associated with the postgres role (username).
   #password:
@@ -58,6 +61,8 @@ development:
 test:
   <<: *default
   database: rails_capstone_test
+  user: pgsv_user
+  password: pgsv_pw
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,3 +87,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+  database: rails_capstone_production_zq0k
+  username: rails_capstone
+  password: pKhVgDB3PRZlGhdMzJHIHluy6PLE3Q3q

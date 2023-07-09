@@ -1,5 +1,5 @@
 databases:
-  - name: postgres
+  - name: rails_capstone
     ipAllowList: []
     databaseName: rails_capstone_production_zq0k
     user: rails_capstone
