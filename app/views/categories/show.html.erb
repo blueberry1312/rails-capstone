@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "categories" %>
+
+<%= render 'shared/navbar', category: @category %>
+
+<section class="category-section">
+  <%= render @category %>
+
+  <div class="actions">
+    <%= link_to "Edit category", edit_category_path(@category), class: "btn" %>
+    <p class="total-spent">Total spent: $<%= @category.atransactions.sum(:amount) %></p>
+    <%= button_to "Delete category", @category, method: :delete, class: "btn delete-btn" %>
+  </div>
+
+  <hr>
+
+  <h2>Transactions</h2>
+
+  <div id="transactions">
+    <% @atransactions.each do |atransaction| %>
+      <%= render atransaction %>
+      <%#<%= link_to "Show this transaction", category_atransaction_path(@category, atransaction) %>  
+    <% end %>
+  </div>   
+  <div class="btn-container">
+  <%= link_to "Add a new transaction", new_category_atransaction_path(@category.id), class: "btn" %>
+  </div>
+
+</section>

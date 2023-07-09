@@ -1,0 +1,19 @@
+databases:
+  - name: rails_capstone
+    ipAllowList: []
+    databaseName: rails_capstone_production_zq0k
+    user: rails_capstone
+
+services:
+  - type: web
+    name: rails_capstone
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: rails_capstone_production_zq0k
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

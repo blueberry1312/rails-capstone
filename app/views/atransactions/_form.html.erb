@@ -1,0 +1,32 @@
+<%= form_with(url: category_atransactions_path, model: atransaction, class: "form") do |form| %>
+  <% if atransaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(atransaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+      <ul>
+        <% atransaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-inputs">
+    <div class="form-group">
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class: "text-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :amount, style: "display: block" %>
+      <%= form.text_field :amount, class: "text-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :categories, style: "display: block" %>
+      <%= form.collection_select :category_id, current_user.categories, :id, :name, {prompt: "Select a category"}, class:"w-full border-0 placeholder-text-m text-text-m", required: true %>
+
+    </div>
+  </div>
+
+  <%= form.submit "Save" %>
+<% end %>

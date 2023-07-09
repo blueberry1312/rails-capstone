@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "transactions_new" %>
+
+<div id="<%= dom_id atransaction %>" class="atransaction-card">
+
+  <div class="atransaction-group">
+    <p class="atransaction-name"><%= atransaction.name %></p>
+
+    <p class="atransaction-date"><%= atransaction.created_at.strftime("%d %B %Y") %></p>
+  </div>
+
+  <p>Spent: $<%= atransaction.amount %></p>
+</div>

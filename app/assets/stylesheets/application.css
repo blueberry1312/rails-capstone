@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: 'Proxima Nova Bold', 'Proxima Nova Light', sans-serif;
+}
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 40vh;
+  min-height: 50vh;
+  color: #434b54;
+
+  .h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .register-button {
+      padding: 1.5rem;
+      width: 70%;
+      text-decoration: none;
+      text-align: center;
+      color: #434b54;
+      background-color: #fff;
+    }
+
+    .login-button {
+      padding: 1.5rem;
+      width: 70%;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #3778c2;
+      background-color: #3778c2;
+      border-radius: 0.25rem;
+    }
+  }
+}
